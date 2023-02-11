@@ -28,7 +28,7 @@ public class Base {
 
 		new WebDriverWait(Hooks.driver, Duration.ofSeconds(30))
 				.until(ExpectedConditions.visibilityOfElementLocated(u_name));
-		Hooks.driver.findElement(u_name).sendKeys("cccyyyxxx");
+		Hooks.driver.findElement(u_name).sendKeys("cccyyyzzz");
 
 		new WebDriverWait(Hooks.driver, Duration.ofSeconds(30))
 				.until(ExpectedConditions.visibilityOfElementLocated(pass));
@@ -56,7 +56,7 @@ public class Base {
 
 		new WebDriverWait(Hooks.driver, Duration.ofSeconds(30))
 				.until(ExpectedConditions.visibilityOfElementLocated(login_name));
-		Hooks.driver.findElement(login_name).sendKeys("cccyyyxxx");
+		Hooks.driver.findElement(login_name).sendKeys("cccyyyzzz");
 
 		
 		Hooks.driver.findElement(login_pass).sendKeys("test123");
