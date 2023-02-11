@@ -15,7 +15,6 @@ import java.time.Duration;
 public class Base {
 	
 	
-	JavascriptExecutor js = (JavascriptExecutor) Hooks.driver;
 
 	public void hit_signup() throws InterruptedException {
 		final By hit_signup = By.xpath("//a[.='Sign up']");
@@ -29,7 +28,7 @@ public class Base {
 
 		new WebDriverWait(Hooks.driver, Duration.ofSeconds(30))
 				.until(ExpectedConditions.visibilityOfElementLocated(u_name));
-		Hooks.driver.findElement(u_name).sendKeys("ccccyxxx");
+		Hooks.driver.findElement(u_name).sendKeys("cccyyyxxx");
 
 		new WebDriverWait(Hooks.driver, Duration.ofSeconds(30))
 				.until(ExpectedConditions.visibilityOfElementLocated(pass));
@@ -44,7 +43,7 @@ public class Base {
 		Hooks.driver.switchTo().alert().accept();
 
 	}
-
+//########################################################################3
 	public void hit_Login() throws InterruptedException {
 		final By hit_login = By.xpath("//a[.='Log in']");
 		final By login_name = By.xpath("//input[@id='loginusername']");
@@ -57,7 +56,7 @@ public class Base {
 
 		new WebDriverWait(Hooks.driver, Duration.ofSeconds(30))
 				.until(ExpectedConditions.visibilityOfElementLocated(login_name));
-		Hooks.driver.findElement(login_name).sendKeys("ccccyxxx");
+		Hooks.driver.findElement(login_name).sendKeys("cccyyyxxx");
 
 		
 		Hooks.driver.findElement(login_pass).sendKeys("test123");
@@ -67,7 +66,7 @@ public class Base {
 		Thread.sleep(1000);
 
 	}
-	
+//#########################################################################################	
 	 public void CheckListedCat_hasItems() throws InterruptedException {
 			final By click_laptops = By.xpath("//a[.='Laptops']");
 			Hooks.driver.findElement(click_laptops).click();
@@ -81,7 +80,8 @@ public class Base {
 			System.out.println("THE LISTED CATEGORIES ALREADY HAS ITEMS"  );
 
 		 }
-
+//##################################################################3
+	 
 	public void Add_item() throws InterruptedException {
 		final By select_category = By.xpath("//a[.='Phones']");
 		final By select_item = By.xpath("//a[.='Samsung galaxy s6']");
@@ -103,7 +103,7 @@ public class Base {
 		Hooks.driver.switchTo().alert().accept();
 
 	}
-	
+	//###################################################################
 	
 	public static By hit_cart = By.xpath("//a[@id='cartur']");
 
@@ -120,6 +120,7 @@ public class Base {
 		Hooks.driver.findElement(delete_item).click();
 
 	}
+//#############################################################################33
 	
 	public void Checkout_item() throws InterruptedException {
 		final By hit_Home = By.xpath("//a[.='Home (current)']");
@@ -154,6 +155,8 @@ public class Base {
      
 		
 	}
+//###################################################################################3
+	
 	
 	 public void Validate_Successful_Checkout() throws InterruptedException {
 			final By checkout = By.xpath("//h2[.='Thank you for your purchase!']");

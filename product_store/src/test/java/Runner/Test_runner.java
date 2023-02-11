@@ -20,10 +20,8 @@ import io.cucumber.testng.CucumberOptions;
 		            dryRun = false
 
 
-		           // tags = "@Runner"
-
 		            )
-//							
+						
 
 		           
 		    public class Test_runner extends AbstractTestNGCucumberTests  {

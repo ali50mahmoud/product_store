@@ -16,7 +16,7 @@ public class steps {
 	public void user_registered_and_logged_in_into_https_www_demoblaze_com() throws InterruptedException {
 	    // Write code here that turns the phrase above into concrete actions
 		Hooks.driver.navigate().to("https://www.demoblaze.com/");
-	   // base.hit_signup();
+	    base.hit_signup();
 	    base.hit_Login();
 	   
 	    

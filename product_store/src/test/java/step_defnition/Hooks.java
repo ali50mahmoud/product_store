@@ -1,10 +1,9 @@
 package step_defnition;
 
-import java.time.Duration;
+import java.time.Duration; 
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -21,9 +20,6 @@ public class Hooks {
 	        {
 	        String chrome=System.getProperty("user.dir")+"\\Chrome_Driver\\chromedriver.exe";
 	    	System.setProperty("webdriver.chrome.driver", chrome);
-	    	ChromeOptions opt = new ChromeOptions();
-	  // *****************************set language to English**************************//
-	        opt.addArguments("−−lang=en");
   // ************************configure options parameter to Chrome driver************************//
 	        driver=new ChromeDriver();
 	        driver.manage().window().setSize(new Dimension(1024, 768)); // browser resolution is 1024x768px
@@ -36,7 +32,7 @@ public class Hooks {
      public static void quit_browser() 
 	       {
 		    new WebDriverWait(Hooks.driver,Duration.ofSeconds(30));
-//	        driver.quit(); 	//close the browser
+            driver.quit(); 	
 
 	       } 
 	    }
