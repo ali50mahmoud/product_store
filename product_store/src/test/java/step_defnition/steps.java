@@ -153,11 +153,10 @@ public class steps {
 	    @Then("I verify that the total amount, including any fees, is correct")
 	    public void verifyTotalAmount() {
 	    	
-	    	String expectedTotalAmount = "100.00";
-	        // Implement verification logic to check the total amount (locate elements by XPath)
-	        WebElement totalAmountElement = Hooks.driver.findElement(By.xpath("//span[@id='total-amount']"));
-	        Assert.assertEquals(totalAmountElement, expectedTotalAmount, "Expected total amount does not match actual total amount");
-	        // Add verification logic here
+	    	 WebElement totalAmountElement = driver.findElement(By.id("total-amount"));
+                 double totalAmountWithShipping = Double.parseDouble(totalAmountElement.getText().replace("$", ""));
+                 double expectedTotalAmount = baseTotalAmount + shippingFee;
+                 assertEquals(expectedTotalAmount, totalAmountWithShipping);
 	    }
 
    
