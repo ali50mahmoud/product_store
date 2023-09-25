@@ -41,35 +41,6 @@ public class steps {
 	    
 	  
 	}
-//
-//	@Then("user Check the listed Categories has Items")
-//	public void user_check_the_listed_categories_has_items() throws InterruptedException {
-//	    // Write code here that turns the phrase above into concrete actions
-//		    Thread.sleep(1000);
-//		    base.CheckListedCat_hasItems(); 
-//	}
-//
-//	@Then("Add random item to the cart & Remove item from cart")
-//	public void add_random_item_to_the_cart_remove_item_from_cart() throws InterruptedException {
-//	    // Write code here that turns the phrase above into concrete actions
-//		  base.Add_item();
-//			base.Remove_item();
-//		
-//	   
-//	}
-//
-//	@When("user Complete successful checkout with random item")
-//	public void user_complete_successful_checkout_with_random_item() throws InterruptedException {
-//	    // Write code here that turns the phrase above into concrete actions
-//		base.Checkout_item();
-//	}
-//
-//	@Then("user should get successful checkout")
-//	public void user_should_get_successful_checkout() throws InterruptedException {
-//	    // Write code here that turns the phrase above into concrete actions
-//		 Thread.sleep(1000);
-//		base.Validate_Successful_Checkout();
-//	}
 
 
 	  @When("I open the left menu")
