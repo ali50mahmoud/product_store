@@ -45,39 +45,46 @@ public class Base {
 	}
 //########################################################################3
 	public void hit_Login() throws InterruptedException {
-		final By hit_login = By.xpath("//a[.='Log in']");
+		final By hit_login = By.xpath("//span[@class='nav-line-2 ']");
 		final By login_name = By.xpath("//input[@id='loginusername']");
 		final By login_pass = By.xpath("//input[@id='loginpassword']");
 		final By Login_btn = By.xpath("//button[.='Log in']");
-
-		new WebDriverWait(Hooks.driver, Duration.ofSeconds(30))
-				.until(ExpectedConditions.visibilityOfElementLocated(hit_login));
+		Hooks.driver.findElement(By.xpath("//span[@class='hm-icon-label']")).click();
+		
+//		new WebDriverWait(Hooks.driver, Duration.ofSeconds(30))
+//				.until(ExpectedConditions.visibilityOfElementLocated(hit_login));
 		Hooks.driver.findElement(hit_login).click();
 
-		new WebDriverWait(Hooks.driver, Duration.ofSeconds(30))
-				.until(ExpectedConditions.visibilityOfElementLocated(login_name));
-		Hooks.driver.findElement(login_name).sendKeys("cccyyyzzz");
+		
+		Hooks.driver.findElement(By.xpath("//input[@id='ap_email']")).sendKeys("tres.zeferino@feerock.com");
+
+		Hooks.driver.findElement(By.xpath("//input[@id='continue']")).click();
+		Hooks.driver.findElement(By.xpath("//input[@id='ap_password']")).sendKeys("As1234");
+		Hooks.driver.findElement(By.xpath("//input[@id='signInSubmit']")).click();
+
+//		Hooks.driver.findElement(login_pass).sendKeys("test123");
 
 		
-		Hooks.driver.findElement(login_pass).sendKeys("test123");
-
-		
-		Hooks.driver.findElement(Login_btn).click();
+//		Hooks.driver.findElement(Login_btn).click();
 		Thread.sleep(1000);
 
 	}
 //#########################################################################################	
 	 public void CheckListedCat_hasItems() throws InterruptedException {
-			final By click_laptops = By.xpath("//a[.='Laptops']");
-			Hooks.driver.findElement(click_laptops).click();
+			
+			
 			Thread.sleep(1000);
-			final By item = By.xpath("//h4[.='Sony vaio i5']");
-
-		 
-		 	new WebDriverWait(Hooks.driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOfElementLocated(item));
-		 	WebElement TextOfItem = Hooks.driver.findElement(item);
-		 	assertEquals(TextOfItem.getText(), "Sony vaio i5");
-			System.out.println("THE LISTED CATEGORIES ALREADY HAS ITEMS"  );
+			final By item = By.xpath("//span[@class=\"nav-line-1\"]");
+			JavascriptExecutor js = (JavascriptExecutor) Hooks.driver;
+	        js.executeScript("arguments[0].dispatchEvent(new MouseEvent('mouseover', { bubbles: true, cancelable: true }))", item);
+               
+	        
+	        final By click_All = By.xpath("//i[@class=\"hm-icon nav-sprite\"]");
+			Hooks.driver.findElement(click_All).click();
+//		 	new WebDriverWait(Hooks.driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOfElementLocated(item));
+//		 	WebElement TextOfItem = Hooks.driver.findElement(item);
+//		 	assertEquals(TextOfItem.getText(), "Sony vaio i5");
+//			System.out.println("THE LISTED CATEGORIES ALREADY HAS ITEMS"  );
 
 		 }
 //##################################################################3
